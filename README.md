@@ -67,3 +67,24 @@ Command to create tenant superuser
 ```bash
 python .\manage.py create_tenant_superuser
 ```
+
+django tenant migrate commands
+
+```bash
+python manage.py migrate_schemas --shared # to migrate public schemas
+python manage.py migrate_schemas --tenant # to migrate tenant schemas
+python manage.py migrate_schemas --schema=tenant_name # to migrate specific tenant schema
+python manage.py migrate_schemas --executer=parallel # execute migation parallely
+```
+
+django collect static command
+
+```bash
+python .\manage.py collectstatic
+```
+
+command to open tenant specific django shell (to do CRUD on that specific tenant schema model)
+
+```bash
+python .\manage.py tenant_command shell
+```
